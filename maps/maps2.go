@@ -15,4 +15,11 @@ func main() {
 		} else {
 				fmt.Println("C# is not in the map")
 		}
+		map["C++"] = 1, false
+		cpp_rating, ok := ratings["C++"]
+		if ok {
+				fmt.Println("C++ is in the map and its rating is ", cpp_rating)
+		} else {
+				fmt.Println("C++ is not in the map its got deleted")
+		}
 }
