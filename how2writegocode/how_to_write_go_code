@@ -6,7 +6,7 @@ export GOPATH=$HOME/mydevenv
 
 cd $GOPATH
 
-mkdir src/github.com/dhanunjaya
+mkdir -p src/github.com/dhanunjaya
 
 for every package create a unique directory and do
 go build && go install, and all the packages will be in $GOPATH/pkg
