@@ -1,0 +1,15 @@
+create a workspace in home directory:
+mkdir mydevenv
+
+set GOPATH env variable:
+export GOPATH=$HOME/mydevenv
+
+cd $GOPATH
+
+mkdir src/github.com/dhanunjaya
+
+for every package create a unique directory and do
+go build && go install, and all the packages will be in $GOPATH/pkg
+
+other than packages do
+go install, and all binaries sit in $GOPATH/bin
