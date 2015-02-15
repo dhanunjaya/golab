@@ -1,8 +1,8 @@
 create a workspace in home directory:
-mkdir mydevenv
+mkdir mygoenv
 
 set GOPATH env variable:
-export GOPATH=$HOME/mydevenv
+export GOPATH=$HOME/mygoenv
 
 cd $GOPATH
 
@@ -13,3 +13,6 @@ go build && go install, and all the packages will be in $GOPATH/pkg
 
 other than packages do
 go install, and all binaries sit in $GOPATH/bin
+
+this will get the code from github and install into local workspace
+go get github.com/dhanunjaya/somecode
