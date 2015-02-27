@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 const (
-	WHITE = iota,
+	WHITE = iota
 	BLACK
 	GREEN
 	YELLOW
@@ -23,7 +23,7 @@ type Box struct {
 type BoxList []Box
 
 func (b Box) Volume() float64 {
-	return height * width * depth
+	return b.height * b.width * b.depth
 }
 
 func (b *Box) setColor(c Color) {
@@ -39,6 +39,12 @@ func (boxlist BoxList) BiggerBox() Color {
 			color = value.color
 		}	
 	}
+	return color
+}
+
+func (c Color) String() string {
+	strings := []string {"WHITE", "BLACK", "GREEN", "YELLOW", "RED", "BLUE"}
+	return strings[c]
 }
 
 func main() {
@@ -48,5 +54,5 @@ func main() {
 		Box{1, 1, 20, BLACK},
 		Box{10, 10, 1, BLUE},
 	}
-	color := BiggerBox(boxes)
+	fmt.Printf("The bigger one is in %s color\n", boxes.BiggerBox().String())
 }
