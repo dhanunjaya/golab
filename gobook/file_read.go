@@ -11,6 +11,8 @@ func main() {
 		fmt.Printf("Open() %s\n", err)
 		os.Exit(1)
 	}
+	defer f.Close()
+
 	buf := make([]byte, 100)
 	n, err := f.Read(buf)
 	stringVersion := string(buf)
