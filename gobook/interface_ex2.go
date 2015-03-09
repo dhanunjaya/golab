@@ -29,6 +29,7 @@ func f(p I) {
 }
 
 func main() {
-	s := S{i:0}
-	f(&s)
+	var i I
+	i = &S{i:0}
+	f(i)
 }
