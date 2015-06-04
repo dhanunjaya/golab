@@ -12,6 +12,6 @@ func main() {
     case "linux":
         fmt.Println("Linux")
     default:
-        fmt.Println(os)
+        fmt.Printf("%s.", os)
     }
 }
