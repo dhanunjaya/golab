@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+    fmt.Println("Go runs on")
     switch os := runtime.GOOS; os {
     case "darwin":
         fmt.Println("OS X.")
